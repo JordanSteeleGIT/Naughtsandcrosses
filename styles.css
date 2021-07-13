@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(243, 253, 253);
+  font-family: "Roboto", sans-serif;
+}
+
+.grid {
+  width: 600px;
+  height: 600px;
+  background-color: #1d5d6d;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.item:nth-child(-n + 3) {
+  border-bottom: 3px solid black;
+}
+
+.item:nth-child(n + 4):nth-child(-n + 6) {
+  border-bottom: 3px solid black;
+}
+
+.item:nth-child(1),
+.item:nth-child(4),
+.item:nth-child(7) {
+  border-right: 3px solid black;
+}
+
+.item:nth-child(3),
+.item:nth-child(6),
+.item:nth-child(9) {
+  border-left: 3px solid black;
+}
+
+button {
+  margin-top: 50px;
+  width: 125px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #1d5d6d;
+  border: none;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.playerTurn {
+  margin-bottom: 50px;
+}
